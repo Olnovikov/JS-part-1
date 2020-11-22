@@ -56,8 +56,8 @@ class Basket {
 }
 
 class Item {
-    _name = ''
-    _price = 0
+    name = ''
+    price = 0
 
 
 
@@ -70,5 +70,16 @@ class Item {
 const myBasket = new Basket(Item1 = new Item('pc', 35000),
     Item2 = new Item('refregerater', 18000),
     Item3 = new Item('tv', 23000))
-console.log(myBasket)
+
+const Basket_box = myBasket.basket
+const Basket_box_html = document.createElement('div')
+
+Basket_box.forEach(element => {
+    const product = Basket_box_html.createElement('a')
+    product.innerText = Item.name
+    product.setAttribute('href', `/${link.toLowerCase()}/`)
+    const product_price = product.createElement('div')
+    product_name.innerText = Item.price
+
+});
 
